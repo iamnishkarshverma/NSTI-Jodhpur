@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            margin-top: 1%;
+        }
+
+        .head-logo {
+            display: flex;
+            width: 65%;
+            margin: auto;
+            font-family: 'Segoe UI';
+
+        }
+
+        h2 {
+            color: #3333b3;
+            font-weight: bolder;
+            width: 20%;
+            font-size: 20px;
+            padding-right: 50px;
+            padding-left: 10px;
+            line-height: 1.1em;
+            padding-top: 5px;
+        }
+
+        .home-links {
+            width: 60%;
+            text-align: center;
+            font-size: 20px;
+            padding-top: 20px;
+            font-weight: 700;
+        }
+
+        .home-links a {
+            text-decoration: none;
+            color: #3333b3;
+        }
+
+        #govtindia-logo {
+            padding-top: 0px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-right: 1px solid white;
+            padding: 10px;
+            padding-left: 10px;
+            margin-left: 30px;
+            padding-right: 30px;
+            font-size: 16px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: #172052;
+        }
+        .login_link{
+            margin-top: 8px;
+            font-weight: 700;
+            font-size: large;
+        }
+        /* .login_link:hover hr{
+            border: 0;
+            border-top: 3px solid white;
+                      
+            animation: hr_hover 0.5s  0s 1 linear;
+        }
+        @keyframes hr_hover {
+            0%{
+                width: 0%;
+            }
+            100%{
+                width: 80%;
+            }
+
+            
+        } */
+        .slider {
+            width: 100%;
+            height: 450px;
+            text-align: center;
+            animation: pics 6s infinite;
+            transition-duration: 6s;
+        }
+
+        @keyframes pics {
+            from {
+                background-image: url(https://nstijodhpur.dgt.gov.in/sites/default/files/styles/home_banner/public/2022-11/RAJ%20BASHA.jpg?itok=u8_vYrNr);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            to {
+                background-image: url(https://nstijodhpur.dgt.gov.in/sites/default/files/styles/home_banner/public/2022-03/braking%20the%20bias.jpg?itok=zBJnM2KV);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+
+
+        .about-nav-links,
+        .course-ofr-nav-links,
+        .knwlge-base-navlinks,
+        .order-nav-links,
+        .our-nsti-nav-links {
+            display: none;
+            position: absolute;
+            margin-top: 10px;
+        }
+
+        .about-nav-links a,
+        .course-ofr-nav-links a,
+        .knwlge-base-navlinks a,
+        .order-nav-links a,
+        .our-nsti-nav-links a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            background-color: #172052;
+            margin-left: 0px;
+            border: none;
+
+        }
+
+        .order-nav-links a {
+            width: 158px;
+            text-align: center;
+        }
+
+        .our-nsti-nav-links a {
+            width: 179px;
+            text-align: center;
+        }
+
+        .about-nav-links a:hover {
+            background-color: orange;
+        }
+        .course-ofr-nav-links a:hover {
+            background-color: orange;
+        }
+
+        .knwlge-base-navlinks a:hover {
+            background-color: orange;
+        }
+
+        .order-nav-links a:hover {
+            background-color: orange;
+        }
+
+        .our-nsti-nav-links a:hover {
+            background-color: orange;
+        }
+
+        .about-us:hover .about-nav-links {
+            display: block;
+        }
+
+        .course-offer:hover .course-ofr-nav-links {
+            display: block;
+        }
+
+        .knwlge-base:hover .knwlge-base-navlinks {
+            display: block;
+        }
+
+        .order:hover .order-nav-links {
+            display: block;
+        }
+
+        .our-nsti:hover .our-nsti-nav-links {
+            display: block;
+        }
+
+        .about-us,
+        .course-offer,
+        .knwlge-base,
+        .order,
+        .our-nsti {
+            margin-top: 10px;
+        }
+
+        marquee {
+            word-spacing: 5px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            color: #172052;
+            font-weight: 900;
+            font-size: larger;
+        }
+
+        .middle-content {
+            margin-top: 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .middle-info {
+            display: flex;
+            width: 60%;
+            margin: auto;
+            padding-top: 40px;
+        }
+
+        .mid-important-info table,
+        td {
+            width: 200px;
+            padding: 5px;
+            border-collapse: collapse;
+            margin-right: 20px;
+            text-align: center;
+            border-bottom: 1px solid gray;
+            background-color: white;
+        }
+
+        .mid-important-info th, .table1 th, .table2 th {
+            background-color: brown;
+            padding: 5px;
+            color: white;
+        }
+
+        .mid-important-info a, .table-content a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .mid-info-details {
+            margin-top: 5px;
+            font-size: larger;
+            word-spacing: 10px;
+            border-left: 2px solid brown;
+            padding-left: 20px;
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+        }
+
+        .mid-info-details div {
+            margin-top: 15px;
+        }
+
+        .table-content {
+            display: flex;
+            width: 60%;
+            margin: auto;
+            margin-top: 40px;
+            font-size: large;
+
+
+        }
+
+        .table1 {
+            width: 40%;
+            margin-right: 10%;
+        }
+
+        .table2 {
+            width: 40%;
+            margin-left: 10%;
+        }
+
+        .table1 tr td {
+            width: 100%;
+            padding: 25px;
+            background-color: #f5f5f5;
+            border: 1px solid white;
+           
+        }
+
+        .table2 tr td {
+            width: 100%;
+            padding: 45px;
+            background-color: #f5f5f5;
+            border: 1px solid white;
+        }
+        .courses-main{
+            margin-top: 40px;
+        }
+        .courses-content{
+            width: 100%;
+            background-color: #f5f5f5;
+            margin-top: 10px;
+        }
+        .course-photo{
+            display: flex;
+            width: 60%;
+            margin: auto;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-top: 20px;   
+        }
+        .course-photo figure{
+            margin-left: 2%;
+        }
+        .course-title {
+            margin: auto;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        figcaption{
+            width: 95%;
+            font-size: 18px;
+            margin: auto;
+        }
+        .e-learning{
+            width: 60%;
+            margin: auto;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .e-learn-photo{
+            display: flex;
+            margin-top: 20px;
+        }
+        .e-learn-photo figure{
+            margin-left: 5%;
+        }
+       /* Courses E--learning titles  */
+        span{
+        font-size: 32px;
+        border-bottom: 2px solid brown;
+        font-weight: bolder;
+       }
+       footer{
+        background-color: #bf1818;
+       }
+       .footer-main{
+        display: flex;
+        width: 60%;
+        margin: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       }
+       .footer-main div{
+        margin-left: 15px;
+        margin-right: 20px;
+        word-spacing: 10px;
+        line-height: 1.74em;
+        color: white;
+       }
+       .visitors-container{
+        padding: 10px;
+       }
+       .visitors-container div{
+        display: flex;
+        background-color: white;
+        color: black;
+        padding-left: 5px;
+       }
+       .visitors-container h3{
+        margin-left: 10px;
+       }
+       .Total-visitors {
+        border-bottom: 1px solid black;
+       }
+       /* hr{
+       border: none;
+       
+   
+       
+       } */
+       
+       
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="head-logo">
+            <div><img src="https://nstijodhpur.dgt.gov.in/themes/nsti_barrio_old123_bk/images/emblem-black.png"
+                    alt="indiagovt" id="govtindia-logo"></div>
+            <h2>MINISTRY OF SKILL DEVELOPMENT AND ENTREPRENEURSHIP</h2>
+            <div><img src="https://nstijodhpur.dgt.gov.in/sites/default/files/dgtv2.png" alt="dgtlogo" height="90px"
+                    width="150"></div>
+            <div class="home-links">
+                <div><a href="index.html">NATIONAL SKILL TRAINING INSTITUTE</a>
+                </div>
+                <a href="index.html">JODHPUR</a>
+            </div>
+            <div><img src="https://nstijodhpur.dgt.gov.in/themes/nsti_barrio_old123_bk/images/skill-india.png"
+                    alt="75republiclogo" height="90px" width="150"></div>
+            <div><img src="https://dgt.gov.in/sites/all/themes/bootstrap_barrio/images/G20_logo2.png" alt="g20logo"
+                    height="90px" width="150"></div>
+        </div>
+        <nav>
+            <div class="navbar">
+                <a href="index.html">HOME</a>
+                <div class="about-us">
+                    <a href="index.html">ABOUT US</a>
+                    <div class="about-nav-links">
+                        <a href="about_us.html">ABOUT NSTI</a>
+                        <a href="infrastructure.html">INFRASTUCTURE</a>
+                        <a href="Green.html" >GREEN INITIATIVES</a>
+                        <a href="all_courses.html">ALL COURSES</a>
+                    </div>
+                </div>
+
+                <div class="course-offer">
+                    <a href="index.html">COURSES OFFERED</a>
+                    <div class="course-ofr-nav-links">
+                        <a href="cts.html">CRAFTSMEN TRAINING SCHEME</a>
+                        <a href="cits.html">CRAFTS INSTRUCTOR TRAINING SCHEME</a>
+                        <a href="new_age_course.html">CTS-NEW AGE COURSE</a>
+                        <a href="avts.html">ADVANCED VOCATIONAL TRAINING SCHEME</a>
+                        <a href="adit.html">ADVANCED DIPLOMA</a>
+                    </div>
+                </div>
+                <div class="knwlge-base">
+                    <a href="">KNOWLEDGE BASE</a>
+                    <div class="knwlge-base-navlinks">
+                        <a href="https://bharatskills.gov.in/Home/Index" target="_blank"
+                            rel="noopener noreferrer">BHARAT SKILL LEARNING PORTAL</a>
+                        <a href="https://skillsbuild.edunetfoundation.org/" target="_blank"
+                            rel="noopener noreferrer">IBM SKILL BUILD PORTAL</a>
+                        <a href="https://bharatskills.gov.in/Home/DGTCisco" target="_blank"
+                            rel="noopener noreferrer">DGT-CISCO NETWORK ACADEMY</a>
+                        <a href="http://nimilearningonline.in/" target="_blank" rel="noopener noreferrer">NIMI ONLINE
+                            LEARNING</a>
+                    </div>
+                </div>
+                <div class="order">
+                    <a href="index.html">ORDERS/NOTICES</a>
+                    <div class="order-nav-links">
+                        <a href="nsti_order.html">NSTI-ORDER</a>
+                        <a href="press.html">PRESS RELEASE</a>
+                        <a href="what_new.html">WHAT'S NEW</a>
+                        <a href="dgt.html">DGT ORDERS</a>
+                        <a href="msde_order.html">MSDE ORDERS</a>
+                    </div>
+                </div>
+                <div class="our-nsti">
+                    <a href="http://">OUR NSTI'S/RDSDE'S</a>
+                    <div class="our-nsti-nav-links">
+                        <a href="dgt.html" target="_blank">DGT</a>
+                        <a href="https://bharatskills.gov.in/" target="_blank" rel="noopener noreferrer">BHARAT
+                            SKILLS</a>
+                        <a href="https://nimi.gov.in/index.html" target="_blank" rel="noopener noreferrer">NIMI</a>
+                        <a href="https://www.ncvtmis.gov.in/pages/home.aspx?AspxAutoDetectCookieSupport=1"
+                            target="_blank" rel="noopener noreferrer">NCVTMIS</a>
+                        <a href="https://www.apprenticeshipindia.gov.in/" target="_blank"
+                            rel="noopener noreferrer">APPENTICESHIP</a>
+                        <a href="https://www.cstaricalcutta.gov.in/" target="_blank"
+                            rel="noopener noreferrer">CSTARI</a>
+                    </div>
+                </div>
+                <div class="login_link">
+                    <a href="login.html">Log in</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="slider">
+        <!-- <img src="https://nstijodhpur.dgt.gov.in/sites/default/files/styles/home_banner/public/2020-07/SLIDE-1-NEW.jpg?itok=qIUD3WWl"
+            alt=""> -->
+    </div>
+    <div class="slider-btm-spce">
+        <!-- <marquee behavior="" direction="">Presented by:- Bharat Prajapat, Nishkarsh Verma, Bhawna Jangid, Payal Gehlot</marquee> -->
+    </div>
+    <div class="middle-content">
+        <div class="middle-info">
+            <div class="mid-important-info">
+                <table>
+                    <tr>
+                        <th>IMPORTANT</th>
+                    </tr>
+                    <tr>
+                        <td><a href="https://nstijodhpur.dgt.gov.in/training-calendar" target="_blank"
+                                rel="noopener noreferrer">TRAINING CALENDAR</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://nstijodhpur.dgt.gov.in/industry-connect" target="_blank"
+                                rel="noopener noreferrer">INDUSTRY CONNECT</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="index.html" target="_blank" rel="noopener noreferrer">ADMISSIONS</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://nstijodhpur.dgt.gov.in/examination" target="_blank"
+                                rel="noopener noreferrer">EXAMINATIONS</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://nstijodhpur.dgt.gov.in/job-placement" target="_blank"
+                                rel="noopener noreferrer">JOB FAIRS/PLACEMENT</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://nstijodhpur.dgt.gov.in/alumni" target="_blank"
+                                rel="noopener noreferrer">NSTI ALUMINI</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://nstijodhpur.dgt.gov.in/success-stories" target="_blank"
+                                rel="noopener noreferrer">SUCCESS STORIES</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://dgt.gov.in/newsletter" target="_blank"
+                                rel="noopener noreferrer">NEWSLETTER</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://shebox.nic.in/" target="_blank" rel="noopener noreferrer">SHE-BOX
+                                COMPLAINT</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://nstijodhpur.dgt.gov.in/budget" target="_blank"
+                                rel="noopener noreferrer">BUDGET</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://nstijodhpur.dgt.gov.in/rti" target="_blank"
+                                rel="noopener noreferrer">RTI</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="mid-info-details">
+                <div>Welcome to NSTI JODHPUR</div>
+                <div>Greetings and Welcome to the National Skill Training Institute, Jodhpur, Rajasthan. As you navigate
+                    our website, we hope you will know who we are and gain an appreciation of our passion for excellence
+                    in Craft Instructors' Training.</div>
+                <div>NSTI Jodhpur is upgraded from MITI in March 2014 with the objective of producing trained Craft
+                    Instructors needed to meet the huge demand for Instructors in various industrial training
+                    institutions (ITI's), other establishments & training institutions existing in the country.</div>
+                <div>The Institute has always seen quality education as a first priority, thus, ensuring the academic
+                    rigor, institute-industry interface, and overall personality development of the trainees. Consistent
+                    efforts are made for bringing refinement in everything that concerns the Institution. Faculty have a
+                    mix of academic and industry experience. </div>
+                <div>However, since there is always scope for continuous improvement in the journey toward excellence,
+                    your valuable suggestions are solicited.</div>
+            </div>
+        </div>
+    </div>
+    <div class="tables">
+        <div class="table-content">
+            <div class="table1">
+                <table>
+                    <tr>
+                        <th>WHAT'S NEW</th>
+                    </tr>
+                    <tr>
+                        <td><a href="https://nstijodhpur.dgt.gov.in/sites/default/files/2022-11/JAN%20JATIYA.pdf"
+                                target="_blank" rel="noopener noreferrer">15 नवंबर 2022 को जनजातीय गौरव दिवस का समारोह /
+                                Celebration of JANJATIYA GAURAV DIVAS on 15 November 2022</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://nstijodhpur.dgt.gov.in/sites/default/files/2022-10/guest%20faculty-26nov2022.pdf"
+                                target="_blank" rel="noopener noreferrer">Applications are invited for appointment in
+                                various guest faculties / विभिन्न अतिथि संकायों में नियुक्ति के लिए आवेदन आमंत्रित किए
+                                जारहे हैं</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://nstijodhpur.dgt.gov.in/sites/default/files/2022-10/2%20oct%202022-1.pdf"
+                                target="_blank" rel="noopener noreferrer">विशेष अभियान 2.0 के तहत दिनांक 02/10/2022 को
+                                स्वच्छ भारत दिवस के तहत स्वच्छता रैली का आयोजन तथा श्रमदान का कार्य एनएसटीआई, जोधपुर में
+                                किया गया।</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://nstijodhpur.dgt.gov.in/sites/default/files/2022-09/Solar%2023-09-2022_23092022093225.PDF"
+                                target="_blank" rel="noopener noreferrer">स्पॉट राउंड प्रवेश सूचना - सोलर टेक्नीशियन</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://nstijodhpur.dgt.gov.in/sites/default/files/2022-09/WEBSITE-CONVOCATION_0.pdf"
+                                target="_blank" rel="noopener noreferrer">CTS और CITS प्रशिक्षण सत्र 2021-22 का कौशल
+                                दीक्षांत समारोह 17 सितंबर 2022 को मनाया गया हैं ।</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="table2">
+                <table>
+                    <tr>
+                        <th>PRESS RELEASE</th>
+                    </tr>
+                    <tr>
+                        <td><a href="https://nstijodhpur.dgt.gov.in/sites/default/files/2022-12/soft%20skill.pdf"
+                                target="_blank" rel="noopener noreferrer">Soft Skill Training by Laghu Udyog
+                                Bharathi</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://nstijodhpur.dgt.gov.in/sites/default/files/2022-12/soft%20skill.pdf"
+                                target="_blank" rel="noopener noreferrer">Important-revised Instructions for AITT
+                                CITS</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://nstijodhpur.dgt.gov.in/sites/default/files/2020-07/aseem_0.pdf"
+                                target="_blank" rel="noopener noreferrer">Important-revised Instructions for AITT
+                                CITS</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://nstijodhpur.dgt.gov.in/sites/default/files/2020-07/Skill_Invite-15%20July-eng_0.pdf"
+                                target="_blank" rel="noopener noreferrer">World Youth Skill Day & 5 Years of Skill India
+                                Mission</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+<div class="courses-main">
+<div class="course-title">
+    <span>COURSES</span>
+</div>
+    <div class="courses-content">
+        <div class="course-photo">
+            <figure>
+                <img src="https://nstijodhpur.dgt.gov.in/sites/default/files/styles/all_course_icon/public/2022-06/IT.PNG?itok=N7TBxcvY" alt="adit">
+                <figcaption>Advanced Diploma</figcaption>
+            </figure>
+            <figure>
+                <img src="https://nstijodhpur.dgt.gov.in/sites/default/files/styles/all_course_icon/public/2020-07/8_2.jpg?itok=Zvj_UHIX">
+                <figcaption>Advanced Vocational Training Scheme</figcaption>
+            </figure>
+            <figure>
+                <img src="https://nstijodhpur.dgt.gov.in/sites/default/files/styles/all_course_icon/public/2020-07/CTS-LOGO.jpg?itok=ylTOyWpp">
+                <figcaption>CTS-New Age Courses</figcaption>
+            </figure>
+            <figure>
+                <img src="https://nstijodhpur.dgt.gov.in/sites/default/files/styles/all_course_icon/public/2020-07/CITS-LOGO_0.jpg?itok=aCgbQMGg">
+                <figcaption>Crafts Instructor Training Scheme (CITS)</figcaption>
+            </figure>
+            <figure>
+                <img src="https://nstijodhpur.dgt.gov.in/sites/default/files/styles/all_course_icon/public/2020-07/8_1.jpg?itok=wQHbhBG7">
+                <figcaption>Craftsmen Training Scheme</figcaption>
+            </figure>
+        </div>
+    </div>
+</div>
+
+<div class="e-learning">
+    <div class="e-learn-title"><span>E-LEARNING</span></div>
+    <div class="e-learn-photo">
+        <figure>
+           <a href="https://bharatskills.gov.in/" target="_blank" rel="noopener noreferrer"> <img src="https://nstijodhpur.dgt.gov.in/sites/default/files/styles/all_course_icon/public/2020-05/bharatskills-logo.png?itok=2ZC_trTk" alt=""></a>
+            <figcaption>Bharat Skills</figcaption>
+        </figure>
+        <figure>
+            <a href="https://www.nimilearningonline.in/" target="_blank" rel="noopener noreferrer"><img src="https://nstijodhpur.dgt.gov.in/sites/default/files/styles/all_course_icon/public/2020-05/nimi.png?itok=LhxCuoU7" alt=""></a>
+            <figcaption>NIMI Online</figcaption>
+        </figure>
+        <figure>
+            <a href="https://skillsbuild.edunetfoundation.org/" target="_blank" rel="noopener noreferrer"></a><img src="https://nstijodhpur.dgt.gov.in/sites/default/files/styles/all_course_icon/public/2020-05/ibm_0.png?itok=HQB85iqZ" alt="">
+            <figcaption>IBM</figcaption>
+        </figure>
+        <figure>
+           <a href="https://bharatskills.gov.in/Home/DGTCisco" target="_blank" rel="noopener noreferrer"> <img src="https://nstijodhpur.dgt.gov.in/sites/default/files/styles/all_course_icon/public/2020-05/cisco_1.png?itok=RFymLnrU" alt=""></a>
+            <figcaption>Cisco</figcaption>
+        </figure>
+        <figure>
+            <a href="http://employabilityskills.net/app/users/login" target="_blank" rel="noopener noreferrer"><img src="https://nstijodhpur.dgt.gov.in/sites/default/files/styles/all_course_icon/public/2020-05/ques.png?itok=v2IkICMn" alt=""></a>
+            <figcaption>Quest Employability Skills</figcaption>
+        </figure>
+
+    </div>
+</div>
+
+<footer>
+    <div class="footer-main">
+        <div class="footer-addr"><h3>ADDRESS</h3> National Skill Traning Institute Heavy Industrial Area, Phase II Basni, Jodhpur 342005, Rajastan Phone 0291-2741089, 2980642</div>
+        <div class="footer-contact"><h3>CONTACT DETAILS</h3> Principal Phone: 0291-2741089, 2980642 E-mail: ati-jod-rj@gov.in, nsti-jodhpur@dgt.gov.in</div>
+        <div><h3>LOCATION</h3><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.1561985974017!2d72.9983521507369!3d26.256593494265484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39418c19456d53ab%3A0x6360ba0d1120491b!2sNational%20Skill%20Training%20Institute%2C%20Jodhpur!5e0!3m2!1sen!2sin!4v1674447766151!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <div class="visitors-container"><h3>VISTORS</h3>
+            <div class="Total-visitors">Total Visitors:
+                <div>11629466</div>
+            </div> 
+            <div class="unique-visitors">Unique Visitors:
+                <div>768403</div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>
